@@ -36,13 +36,12 @@
     keymap {
         compatible = "zmk,keymap";
 
-
         default_layer {
             bindings = <
  &kp ESC   &lt 0 N1         &lt 1 N2           &lt 2 N3       &lt 3 N4       &lt 4 N5 &tog 1                                                                       &mo 1 &lt 5 N6        &lt 6 N7        &lt 7 N8            &lt 8 N9    &kp N0   &kp MINUS
  &kp TAB   &kp Q            &kp W              &kp E          &hm ESC R      &kp T    &macro_obs                                                                   &none &kp Y           &hm ESC U       &kp I               &kp O       &kp P    &kp EQUAL
  &kp BSLH  &hm LEFT_SHIFT A &hm LEFT_CONTROL S &hm LEFT_ALT D &hm LEFT_GUI F &kp G    &macro_daily      &kp LCTRL &kp LALT             &kp LGUI  &kp RCTRL         &none &hm RIGHT_GUI H &hm RIGHT_ALT J &hm RIGHT_CONTROL K &hm RSHFT L &kp SEMI &kp SQT
- &kp LSHFT &kp Z            &kp X              &kp C          &kp V          &kp B                    &none &none &kp HOME &none &none &kp PG_UP &none &none       &kp N           &kp M                 &kp COMMA           &kp DOT     &kp FSLH &kp RSHFT
+ &kp LSHFT &kp Z            &kp X              &kp C          &kp V          &kp B                                &kp HOME             &kp PG_UP                   &kp N           &kp M                 &kp COMMA           &kp DOT     &kp FSLH &kp RSHFT
  &mo 1      &kp GRAVE        &to 6            &kp LEFT       &kp RIGHT                        &kp BSPC &kp DEL   &kp END              &kp PG_DN &kp ENTER &kp SPACE               &kp UP                &kp DOWN            &kp LBKT    &kp RBKT &mo 7
             >;
         };
@@ -52,7 +51,7 @@
  &kp F1  &kp F2    &kp F3   &kp F4    &kp F5   &kp F6   &tog 1                                                       &mo 0  &kp F7  &kp F8    &kp F9   &kp F10   &kp F11   &kp F12
  &none   &kp PG_UP &kp UP   &kp PG_DN &kp HOME &kp HOME &none                                                        &none  &trans  &kp PG_UP &kp UP   &kp PG_DN &kp PG_UP &kp HOME
  &trans  &kp LEFT  &kp DOWN &kp RIGHT &kp END  &kp END  &none        &kp ESC &trans             &trans &trans        &none  &kp H   &kp LEFT  &kp DOWN &kp RIGHT &kp PG_DN &kp END
- &none   &none     &trans   &trans    &m_chr_prv &m_chr_nxt    &none &none   &trans &none &none &trans &none &none          &trans  &trans    &trans   &trans    &trans    &trans
+ &none   &none     &trans   &trans    &m_chr_prv &m_chr_nxt                  &trans             &trans                      &trans  &trans    &trans   &trans    &trans    &trans
  &trans  &trans    &trans   &trans    &trans                  &trans &trans  &trans             &trans &trans &kp SPACE             &trans    &trans   &trans    &trans    &trans
             >;
         };
@@ -62,7 +61,7 @@
  &kp EQUAL  &kp MINUS &kp FSLH  &kp N3     &kp SEMI  &kp SQT   &trans      &mo 9                                                                  &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY   &kp MINUS
  &kp TAB    &kp EQUAL &kp FSLH  &none      &kp LBKT  &kp RBKT  &none      &none                                                                   &kp Y   &kp KP_N7     &kp KP_N8      &kp KP_N9     &kp KP_MINUS    &kp EQUAL
  &kp ESC    &kp A     &kp FSLH  &none     &kp COMMA &kp DOT   &none                        &kp ESC   &kp LALT            &kp GUI   &kp RCTRL       &none     &kp H  &kp KP_N4  &kp KP_N5  &kp KP_N6   &kp KP_PLUS    &kp SQT
- &kp LSHFT  &kp Z     &kp X     &kp C      &kp LPAR  &kp RPAR            &none      &none   &kp HOME          &none &none &kp PG_UP                       &none       &none     &kp N  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_ENTER  &kp RSHFT
+ &kp LSHFT  &kp Z     &kp X     &kp C      &kp LPAR  &kp RPAR                               &kp HOME                      &kp PG_UP                       &kp N  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_ENTER  &kp RSHFT
  &mo 2      &kp GRAVE &kp ESC   &kp LEFT   &kp RIGHT                               &kp BSPC &kp DEL   &kp END             &kp PG_DN &kp ENTER &kp KP_N0         &kp UP         &kp DOWN  &kp KP_DOT  &kp RBKT      &mo 2
             >;
         };
@@ -72,7 +71,7 @@
  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6            &tog 1   &mo 3  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
  &trans  &trans  &trans  &trans  &trans  &trans             &none   &none  &trans  &trans  &trans   &trans   &trans   &trans
  &trans  &trans  &trans  &trans  &trans  &trans             &none  &trans  &trans                   &trans   &trans    &none  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans             &none   &none  &trans   &none   &none   &trans    &none    &none  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans                            &trans                   &trans                    &trans  &trans  &trans  &trans  &trans  &trans
  &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans   &trans   &trans   &trans  &trans  &trans
             >;
         };
@@ -82,7 +81,7 @@
  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6            &tog 1   &mo 3  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
  &trans  &trans  &trans  &trans  &trans  &trans             &none   &none  &trans  &trans  &trans   &trans   &trans   &trans
  &trans  &trans  &trans  &trans  &trans  &trans             &none  &trans  &trans                   &trans   &trans    &none  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans             &none   &none  &trans   &none   &none   &trans    &none    &none  &trans  &trans  &trans  &trans  &trans  &trans
+ &trans  &trans  &trans  &trans  &trans  &trans                            &trans                   &trans                    &trans  &trans  &trans  &trans  &trans  &trans
  &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans   &trans   &trans   &trans  &trans  &trans
             >;
         };
@@ -92,7 +91,7 @@
  &trans  &trans  &trans  &trans  &trans  &trans            &trans   &trans &trans  &trans  &trans  &trans  &trans  &trans
   &trans         &macro_spotify	&kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP         &trans                       &trans &trans &trans         &trans            &trans         &trans         &trans                   &trans
   &trans         &kp C_PREV 		&kp C_PAUSE   &kp C_PLAY    &kp C_NEXT       &trans            &trans   &trans &trans                                   &trans &trans &trans   &trans   &trans   &trans   &trans   &trans   &trans
-  &trans         &kp C_RW      		&kp C_VOL_DN  &kp C_VOL_UP  &kp C_FF         &trans                             &trans        &trans         &trans         &trans            &trans         &trans         &trans                   &trans   &trans   &trans   &trans   &trans   &trans   &trans
+  &trans         &kp C_RW      		&kp C_VOL_DN  &kp C_VOL_UP  &kp C_FF         &trans                             &trans         &trans            &trans   &trans   &trans   &trans   &trans   &trans   
  &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans   &trans   &trans   &trans  &trans  &trans
             >;
         };
@@ -102,7 +101,7 @@
  &kp ESC   &lt 0 N1         &lt 1 N2           &lt 2 N3       &lt 3 N4       &lt 4 N5 &none                                                                        &mo 1 &lt 5 N6  &lt 6 N7  &lt 7 N8   &lt 8 N9    &kp N0   &kp MINUS
  &kp TAB   &kp Q            &kp W              &kp E          &kp R          &kp T    &none                                                                        &none &kp Y     &kp U     &kp I      &kp O       &kp P    &kp PLUS
  &kp BSLH  &kp A            &kp S              &kp D          &kp F          &kp G    &none             &kp LCTRL &kp LALT             &kp LGUI  &kp RCTRL         &none &kp H     &kp J     &kp K      &kp L       &kp SEMI &kp SQT
- &kp LSHFT &kp Z            &kp X              &kp C          &kp V          &kp B                    &none &none &kp HOME &none &none &kp PG_UP &none &none       &kp N           &kp M     &kp COMMA  &kp DOT     &kp FSLH &kp RSHFT
+ &kp LSHFT &kp Z            &kp X              &kp C          &kp V          &kp B                                &kp HOME             &kp PG_UP                   &kp N           &kp M     &kp COMMA  &kp DOT     &kp FSLH &kp RSHFT
  &to 0     &kp GRAVE        &kp ESC            &kp LEFT       &kp RIGHT                        &kp BSPC &kp DEL   &kp END              &kp PG_DN &kp ENTER &kp SPACE               &kp UP    &kp DOWN   &kp LBKT    &kp RBKT &mo 2
             >;
         };
@@ -113,8 +112,8 @@
   &none  &bt BT_SEL 0   &bt  BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none   								     		     &trans      	    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none
   &none  &macro_spotify	&kp C_VOL_DN   &kp C_VOL_UP  &kp C_PP      &none         &bootloader  									  	     &bootloader 	    &none         &none         &none         &none         &none         &none
   &none  &kp C_PREV 	&kp C_PAUSE    &kp C_PLAY    &kp C_NEXT    &none         &rgb_ug RGB_MEFS_CMD 5           &bt BT_CLR &none    &bt BT_CLR &bt BT_CLR        	     &rgb_ug RGB_MEFS_CMD 5 &none  	  &none   	&none         &none	    &none   	  &none
-  &none  &kp C_RW      	&kp C_VOL_DN   &kp C_VOL_UP  &kp C_FF      &none         &none        			 &none &none &none    &none &none &none           	     &none	            &none   	  &none   	&none         &none         &none         &none
-  &to 0  &none         	&none          &bl BL_INC    &bl BL_DEC    &rgb_ug RGB_TOG                          &bl BL_TOG &none &none    &bl BL_TOG &rgb_ug RGB_TOG &bl BL_INC  			    &bl BL_DEC    &none   	&none         &none
+  &none  &kp C_RW      	&kp C_VOL_DN   &kp C_VOL_UP  &kp C_FF      &none                                              &none    &none                       	                       &none   	  &none   	&none         &none         &none         &none
+  &to 0  &none         	&none          &bl BL_INC    &bl BL_DEC    &rgb_ug RGB_TOG                          &bl BL_TOG &none &none    &bl BL_TOG &rgb_ug RGB_TOG &bl BL_INC  			    &bl BL_DEC    &none   	&none         &none &none
             >;
         };
 
